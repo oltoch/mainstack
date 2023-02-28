@@ -1,12 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:mainstack/utils/app_colors.dart';
 
 import 'texts.dart';
 
 class TitleWidget extends StatelessWidget {
-  const TitleWidget(this.title, {super.key});
+  const TitleWidget(
+    this.title, {
+    super.key,
+    this.fontStyle = FontStyle.poppins,
+    this.textColor = kBlack,
+    this.isDarkMode = false,
+  });
 
   final String title;
+  final FontStyle fontStyle;
+  final Color textColor;
+  final bool isDarkMode;
 
   @override
   Widget build(BuildContext context) {
@@ -21,6 +31,8 @@ class TitleWidget extends StatelessWidget {
         title,
         fontSize: 14.sp,
         fontWeight: FontWeight.w500,
+        color: textColor,
+        fontStyle: fontStyle,
       ),
     );
   }

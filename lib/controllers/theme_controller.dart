@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:mainstack/utils/app_colors.dart';
 
 import 'package:mainstack/widgets/texts.dart' as text;
 
@@ -53,6 +54,8 @@ class ThemeController extends GetxController {
   bool get buttonExpanded => _buttonExpanded.value;
 
   set buttonExpanded(bool value) => _buttonExpanded.value = value;
+
+  Color get textColor => isDarkMode ? kWhite:kBlack;
 }
 
 enum ButtonType{

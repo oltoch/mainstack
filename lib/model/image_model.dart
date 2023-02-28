@@ -5,21 +5,40 @@ class ImageModel {
   final LayoutStyle layoutStyle;
   final List<ImageFile> images;
 
-  const ImageModel({
-    this.hasHeading = false,
-    this.title,
-    this.description,
-    this.layoutStyle = LayoutStyle.single,
-    this.images = const [],
-  })  : assert(hasHeading == false || title != null,
-            'title cannot be null if hasHeading is true'),
-        //Assert that if layoutStyle is grid or carousel, images.length must be greater than 1
-        assert(
-            (layoutStyle == LayoutStyle.single && images.length == 1) ||
-                (layoutStyle == LayoutStyle.grid && images.length > 1) ||
-                (layoutStyle == LayoutStyle.carousel && images.length > 1),
-            'images.length must be greater than 1 if layoutStyle is grid or carousel');
+  const ImageModel(
 
+  {
+
+  this
+
+      .
+
+  hasHeading = false,
+  this.title,
+  this.description,
+  this.layoutStyle = LayoutStyle.single,
+  this.
+
+  images
+
+  =
+
+  const
+
+  [
+
+  ]
+
+  ,
+// })  : assert(hasHeading == false || title != null,
+//           'title cannot be null if hasHeading is true'),
+//       //Assert that if layoutStyle is grid or carousel, images.length must be greater than 1
+//       assert(
+//           (layoutStyle == LayoutStyle.single && images.length == 1) ||
+//               (layoutStyle == LayoutStyle.grid && images.length > 1) ||
+//               (layoutStyle == LayoutStyle.carousel && images.length > 1),
+//           'images.length must be greater than 1 if layoutStyle is grid or carousel');
+});
   ImageModel copyWith({
     bool? hasHeading,
     String? title,

@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mainstack/controllers/editor_controller.dart';
 import 'package:mainstack/controllers/theme_controller.dart';
 import 'package:mainstack/views/editor_main_view.dart';
 
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
         ),
         builder: (context, widget) {
           Get.put(ThemeController());
+          Get.put(EditorController());
           SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
           return widget!;
         },
